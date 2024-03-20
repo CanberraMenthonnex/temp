@@ -18,9 +18,16 @@ def article(id):
 @app.route('/api')
 def get_api():
     return {
-        "username": "Lucas",
-        "theme": "Un espion dans la ville",
-        "image": "Une url",
+        "name": "scénario",
+        "description": "une description de scénario",
+        "scenes": [
+            {
+                "name": "un nom de scène",
+                "place": "une place",
+                "context": "un contexte",
+                "characters": "un joueur",
+            },
+        ],
     }
 
 @app.route('/<prompt>')
